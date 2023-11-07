@@ -1,5 +1,5 @@
 import { NextAuthOptions } from "next-auth";
-
+import GoogleProvider from "next-auth/providers/google"
 export const authOptions:NextAuthOptions = {
     providers:[
         GoogleProvider({
@@ -9,6 +9,3 @@ export const authOptions:NextAuthOptions = {
     ]
 } satisfies NextAuthOptions;
 
-function GoogleProvider(arg0: { clientId: string; clientSecret: string; }): import("next-auth/providers/index").Provider {
-    throw new Error("Function not implemented.");
-}
