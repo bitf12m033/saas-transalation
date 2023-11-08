@@ -7,7 +7,7 @@ const UserAvatar = ({
   image,
   className,
 }: {
-  name: string;
+  name?: string | null;
   image: string;
   className?: string;
 }) => {
@@ -16,7 +16,7 @@ const UserAvatar = ({
       {image && (
         <Image
           src={image}
-          alt={name}
+          alt={name || "UserImage"}
           width={40}
           height={40}
           className="rounded-full"
