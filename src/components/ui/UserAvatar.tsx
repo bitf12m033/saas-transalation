@@ -8,14 +8,14 @@ const UserAvatar = ({
   className,
 }: {
   name?: string | null;
-  image: string;
+  image: string | null;
   className?: string;
 }) => {
   return (
     <Avatar className={cn("bg-white text-black", className)}>
       {image && (
         <Image
-          src={image}
+          src={image || "https://github.com/shadcn.png"}
           alt={name || "UserImage"}
           width={40}
           height={40}
